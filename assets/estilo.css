@@ -1,0 +1,290 @@
+/* General */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del fondo con imagen */
+.background-container {
+    background-image: url('/assets/images/seguridad_ciudadana.jpg');  /* Imagen de seguridad ciudadana */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(60%);  /* Oscurece ligeramente la imagen */
+    position: relative; /* Para colocar el formulario sobre la imagen */
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+    background-color:#1d2e07;  /* Fondo oscuro semi-transparente */
+    padding: 60px 35px;
+    border-radius: 60px;  /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);  /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centrado del formulario */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Estilo para el título */
+.titulo {
+    font-size: 2.5rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);  /* Sombra en el texto para darle profundidad */
+}
+
+/* Estilo para el subtítulo */
+.subtitulo {
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);  /* Sombra en el subtítulo */
+}
+
+/* Estilos para los campos de entrada */
+.input-login {
+    width: 100%;
+    padding: 16px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto cuando el campo de entrada es enfocado */
+.input-login:focus {
+    border-color: #7a6d2a;
+    box-shadow: 0 0 12px rgba(122, 109, 42, 0.9);
+    outline: none;
+}
+
+/* Estilo del botón de login */
+.btn-login {
+    background-color: #655b17;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.btn-login:hover {
+    background-color: #7a6d2a;
+    transform: scale(1.05);  /* Aumento al hacer hover */
+    box-shadow: 0 5px 15px rgba(122, 109, 42, 0.6);  /* Agregar sombra al hacer hover */
+}
+
+/* Confirmación de error de login */
+#login-alert {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Animación suave al cargar */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de entrada para el formulario */
+.login-container {
+    animation: bounce;
+}
+
+/* Estilo para los iconos dentro de los campos de entrada */
+.input-group-text {
+    background-color: #655b17;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Modificación de la animación de los campos de entrada */
+.input-login:focus {
+    border-color: #7a6d2a;
+    box-shadow: 0 0 15px rgba(122, 109, 42, 0.9);
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: #655b17;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #333;
+}
+
+/* Contenedor de pantalla dividida */
+.split-screen-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Lado izquierdo con imagen */
+.left-image {
+    flex: 3;  /* 60% aproximadamente */
+    background-image: url('/assets/images/seguridad_ciudadana.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+}
+
+/* Lado derecho con login */
+.right-login {
+    flex: 2;  /* 40% restante */
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ==================== DASHBOARD DE SEGURIDAD CIUDADANA ==================== */
+
+/* Estilo para el contenedor principal del dashboard */
+.dashboard-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título principal */
+.dashboard-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el total de casos */
+.total-casos {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: #2ECC71;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Estilo para los filtros */
+.filtros-row {
+    margin-bottom: 30px;
+}
+
+.filtro-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filtro-dropdown {
+    font-size: 14px;
+}
+
+/* Estilo para las tarjetas de gráficos */
+.card-grafico {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Botones de exportación */
+.btn-export {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Colores y efectos de hover para botones */
+.btn-export:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn-export-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-export-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Estilo para los gráficos (las barras) */
+.plotly-graph-div {
+    margin-top: 30px;
+}
+
+.plotly-graph-div .bar {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.plotly-graph-div .bar:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Personalización de las leyendas de los gráficos */
+.plotly-graph-div .legend {
+    background-color: transparent;
+    font-size: 14px;
+}
+
+/* Ajustes para el color de las barras y valores dentro de ellas */
+.plotly-graph-div .bar {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Personalización del fondo del dashboard */
+body {
+    background-color: #e9ecef;
+    font-family: Arial, sans-serif;
+}
